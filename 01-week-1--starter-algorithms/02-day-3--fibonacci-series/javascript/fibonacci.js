@@ -1,5 +1,16 @@
-function fibonacci(num) {
-  // type your code here
+function fibonacci(num){
+if (num < 2) {
+  return num;
+}
+
+let fib = [0, 1];
+
+for (let i = 0; i < num - 1; ++i) {
+  const sum = fib[0] + fib[1];
+  fib = [fib[1], sum];
+}
+
+return fib[1];
 }
 
 if (require.main === module) {
